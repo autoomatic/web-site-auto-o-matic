@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=5516988374411&text=Ol%C3%A1%21+Gostaria+de+conhecer+mais+sobre+o+Auto-o-matic,+e+entender+como+ele+pode+me+ajudar+!+%3AD&type=phone_number&app_absent=0";
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,6 +12,11 @@ const Header = () => {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     }
+  };
+
+  const openWhatsApp = () => {
+    window.open(whatsappUrl, '_blank');
+    setIsMenuOpen(false);
   };
 
   return (
@@ -58,7 +64,7 @@ const Header = () => {
         </nav>
 
         <Button
-          onClick={() => scrollToSection('contact')}
+          onClick={openWhatsApp}
           className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-white font-dm-sans"
         >
           Fale Conosco
@@ -112,7 +118,7 @@ const Header = () => {
               Contato
             </button>
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={openWhatsApp}
               className="bg-primary hover:bg-primary/90 text-white font-dm-sans w-full"
             >
               Fale Conosco

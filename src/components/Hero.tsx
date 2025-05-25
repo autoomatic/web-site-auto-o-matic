@@ -13,10 +13,13 @@ const Hero = () => {
     <section id="home" className="pt-20 pb-20 bg-gradient-to-br from-primary/5 to-secondary/10">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold text-accent mb-6 font-poppins leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-accent mb-4 font-poppins leading-tight">
             Simplifique sua
             <span className="text-primary block">Transformação Digital</span>
           </h1>
+          <div className="text-2xl md:text-3xl font-semibold text-primary mb-8 font-dm-sans">
+            Automatize tarefas, potencialize talentos.
+          </div>
           <p className="text-xl text-accent/80 mb-8 font-dm-sans leading-relaxed max-w-3xl mx-auto">
             Com nossa metodologia auto-o-matic, transformamos a complexidade em simplicidade. 
             Automação inteligente em semanas, não meses, com resultados garantidos.

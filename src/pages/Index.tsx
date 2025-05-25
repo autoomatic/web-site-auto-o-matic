@@ -6,6 +6,7 @@ import Methodology from "@/components/Methodology";
 import Solutions from "@/components/Solutions";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <Solutions />
       <ContactForm />
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
