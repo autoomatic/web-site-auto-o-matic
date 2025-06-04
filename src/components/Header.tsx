@@ -1,131 +1,122 @@
-
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const whatsappUrl = "https://api.whatsapp.com/send/?phone=5516988374411&text=Ol%C3%A1%21+Gostaria+de+conhecer+mais+sobre+o+Auto-o-matic,+e+entender+como+ele+pode+me+ajudar+!+%3AD&type=phone_number&app_absent=0";
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
     }
-  };
-
-  const openWhatsApp = () => {
-    window.open(whatsappUrl, '_blank');
     setIsMenuOpen(false);
   };
 
+  const openWhatsApp = () => {
+    const whatsappUrl = "https://api.whatsapp.com/send/?phone=5516988374411&text=Ol%C3%A1%21+Gostaria+de+conhecer+mais+sobre+o+Auto-o-matic,+e+entender+como+ele+pode+me+ajudar+!+%3AD&type=phone_number&app_absent=0";
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">A</span>
+    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">A</span>
+            </div>
+            <span className="text-xl font-bold text-accent font-poppins">Auto-o-Matic</span>
+            <span className="text-sm text-primary font-dm-sans hidden sm:block">Automatize tarefas, potencialize talentos.</span>
           </div>
-          <span className="text-2xl font-bold text-primary font-poppins">Auto 0 Matic</span>
-        </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <button
-            onClick={() => scrollToSection('home')}
-            className="text-accent hover:text-primary transition-colors font-dm-sans font-medium"
-          >
-            Home
-          </button>
-          <button
-            onClick={() => scrollToSection('about')}
-            className="text-accent hover:text-primary transition-colors font-dm-sans font-medium"
-          >
-            Quem Somos
-          </button>
-          <button
-            onClick={() => scrollToSection('benefits')}
-            className="text-accent hover:text-primary transition-colors font-dm-sans font-medium"
-          >
-            Benefícios
-          </button>
-          <button
-            onClick={() => scrollToSection('process')}
-            className="text-accent hover:text-primary transition-colors font-dm-sans font-medium"
-          >
-            Nosso Processo
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="text-accent hover:text-primary transition-colors font-dm-sans font-medium"
-          >
-            Contato
-          </button>
-        </nav>
-
-        <Button
-          onClick={openWhatsApp}
-          className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-white font-dm-sans"
-        >
-          Fale Conosco
-        </Button>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2"
-        >
-          <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-            <div className={`w-6 h-0.5 bg-accent transition-all ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
-            <div className={`w-6 h-0.5 bg-accent transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-            <div className={`w-6 h-0.5 bg-accent transition-all ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
-          </div>
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-accent hover:text-primary transition-colors font-dm-sans font-medium text-left"
+              className="text-accent hover:text-primary transition-colors font-dm-sans"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-accent hover:text-primary transition-colors font-dm-sans font-medium text-left"
+              className="text-accent hover:text-primary transition-colors font-dm-sans"
             >
               Quem Somos
             </button>
             <button
               onClick={() => scrollToSection('benefits')}
-              className="text-accent hover:text-primary transition-colors font-dm-sans font-medium text-left"
+              className="text-accent hover:text-primary transition-colors font-dm-sans"
             >
               Benefícios
             </button>
             <button
               onClick={() => scrollToSection('process')}
-              className="text-accent hover:text-primary transition-colors font-dm-sans font-medium text-left"
+              className="text-accent hover:text-primary transition-colors font-dm-sans"
             >
               Nosso Processo
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-accent hover:text-primary transition-colors font-dm-sans font-medium text-left"
-            >
-              Contato
-            </button>
             <Button
               onClick={openWhatsApp}
-              className="bg-primary hover:bg-primary/90 text-white font-dm-sans w-full"
+              size="sm"
+              className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-medium"
             >
               Fale Conosco
             </Button>
           </nav>
+
+          {/* Mobile Menu */}
+          <div className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <X className="h-6 w-6 text-accent" />
+              ) : (
+                <Menu className="h-6 w-6 text-accent" />
+              )}
+            </button>
+
+            {/* Mobile Menu Content */}
+            {isMenuOpen && (
+              <div className="absolute top-full left-0 right-0 bg-white shadow-md rounded-md p-4">
+                <nav className="flex flex-col space-y-4">
+                  <button
+                    onClick={() => scrollToSection('home')}
+                    className="text-accent hover:text-primary transition-colors font-dm-sans"
+                  >
+                    Home
+                  </button>
+                  <button
+                    onClick={() => scrollToSection('about')}
+                    className="text-accent hover:text-primary transition-colors font-dm-sans"
+                  >
+                    Quem Somos
+                  </button>
+                  <button
+                    onClick={() => scrollToSection('benefits')}
+                    className="text-accent hover:text-primary transition-colors font-dm-sans"
+                  >
+                    Benefícios
+                  </button>
+                  <button
+                    onClick={() => scrollToSection('process')}
+                    className="text-accent hover:text-primary transition-colors font-dm-sans"
+                  >
+                    Nosso Processo
+                  </button>
+                  <Button
+                    onClick={openWhatsApp}
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-medium w-full"
+                  >
+                    Fale Conosco
+                  </Button>
+                </nav>
+              </div>
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };

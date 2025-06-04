@@ -25,7 +25,7 @@ const FinalCTA = () => {
           
           <p className="text-xl mb-8 font-dm-sans leading-relaxed">
             Chega de perder tempo e dinheiro com processos manuais repetitivos. 
-            A Auto 0 Matic está pronta para ser sua parceira estratégica em automação.
+            A Auto-o-Matic está pronta para ser sua parceira estratégica em automação.
           </p>
 
           <div className="bg-white/10 rounded-2xl p-6 mb-10">

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -194,7 +193,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-accent font-poppins">Email</h4>
-                      <p className="text-accent/70 font-dm-sans">contato@autoomatic.app</p>
+                      <p className="text-accent/70 font-dm-sans">contato@autoomatic.com</p>
                     </div>
                   </div>
                 </div>

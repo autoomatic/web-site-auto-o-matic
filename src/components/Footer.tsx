@@ -1,4 +1,3 @@
-
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -17,7 +16,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-2xl font-bold font-poppins">Auto 0 Matic</span>
+              <span className="text-2xl font-bold font-poppins">Auto-o-Matic</span>
             </div>
             <p className="text-white/80 font-dm-sans leading-relaxed mb-6 max-w-md">
               Escritório de automação de tarefas focado em médias e grandes empresas. 
@@ -90,7 +89,7 @@ const Footer = () => {
                 <p className="text-white/80 font-dm-sans">(16) 9 8837-4411</p>
               </div>
               <div>
-                <p className="text-white/80 font-dm-sans">contato@auto0matic.com</p>
+                <p className="text-white/80 font-dm-sans">contato@autoomatic.com</p>
               </div>
             </div>
           </div>
@@ -99,7 +98,7 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 font-dm-sans text-sm">
-              © 2024 Auto 0 Matic – Automação Inteligente para Empresas. Todos os direitos reservados.
+              © 2024 Auto-o-Matic – Automação Inteligente para Empresas. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <span className="text-white/60 font-dm-sans text-sm">

@@ -22,7 +22,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-accent mb-6 font-poppins leading-tight">
             Transforme Seus Processos Repetitivos em
             <span className="text-primary block">Eficiência e Economia</span>
-            <span className="block text-3xl md:text-4xl mt-2">com a Auto 0 Matic</span>
+            <span className="block text-3xl md:text-4xl mt-2">com a Auto-o-Matic</span>
           </h1>
           
           <div className="text-xl md:text-2xl text-accent/90 mb-8 font-dm-sans leading-relaxed max-w-4xl mx-auto">
@@ -30,7 +30,7 @@ const Hero = () => {
               Cansado de tarefas manuais que consomem tempo e recursos? 
             </p>
             <p className="mb-4">
-              A Auto 0 Matic é um escritório de automação de tarefas focado em médias e grandes empresas, 
+              A Auto-o-Matic é um escritório de automação de tarefas focado em médias e grandes empresas, 
               ajudando você a otimizar operações, reduzir custos e liberar sua equipe para o que realmente importa.
             </p>
             <p className="font-semibold text-primary text-2xl">

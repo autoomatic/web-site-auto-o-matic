@@ -10,7 +10,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-accent mb-6 font-poppins">
-            Auto 0 Matic: <span className="text-primary">Inovação e Foco em Resultados</span>
+            Auto-o-Matic: <span className="text-primary">Inovação e Foco em Resultados</span>
           </h2>
           <h3 className="text-2xl text-primary mb-8 font-dm-sans">
             para Empresas em Ribeirão Preto e Região
@@ -19,7 +19,7 @@ const About = () => {
 
         <div className="max-w-5xl mx-auto space-y-8 text-lg font-dm-sans leading-relaxed">
           <p className="text-accent/80 text-center">
-            Somos a Auto 0 Matic, um escritório com três anos de experiência dedicado à automação de tarefas. 
+            Somos a Auto-o-Matic, um escritório com três anos de experiência dedicado à automação de tarefas. 
             Nosso objetivo nos próximos 12 meses é claro: nos tornar a referência em automação em Ribeirão Preto e região.
           </p>
 
@@ -34,7 +34,7 @@ const About = () => {
 
           <div className="text-center mt-12">
             <h3 className="text-3xl font-bold text-accent mb-8 font-poppins">
-              A Diferença Auto 0 Matic: <span className="text-primary">Confiança, Transparência e Resultados Comprovados</span>
+              A Diferença Auto-o-Matic: <span className="text-primary">Confiança, Transparência e Resultados Comprovados</span>
             </h3>
             <p className="text-accent/80 mb-8">
               Entendemos que investir em automação é uma decisão importante. Por isso, construímos nosso serviço 
