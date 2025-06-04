@@ -15,23 +15,17 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">a</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-2xl font-bold font-poppins">auto-o-matic</span>
+              <span className="text-2xl font-bold font-poppins">Auto 0 Matic</span>
             </div>
             <p className="text-white/80 font-dm-sans leading-relaxed mb-6 max-w-md">
-              Simplifique sua transformação digital com nossa metodologia exclusiva. 
-              Automação inteligente em semanas, não meses, com resultados garantidos.
+              Escritório de automação de tarefas focado em médias e grandes empresas. 
+              Transformamos processos manuais repetitivos em eficiência e economia para sua empresa.
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <div className="text-2xl font-bold text-primary mb-1 font-poppins">70%</div>
-                <p className="text-sm text-white/70 font-dm-sans">Redução no tempo operacional</p>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-secondary mb-1 font-poppins">95%</div>
-                <p className="text-sm text-white/70 font-dm-sans">Diminuição de erros</p>
-              </div>
+            <div className="text-sm text-white/60">
+              <p>Ribeirão Preto e Região</p>
+              <p>3 anos de experiência em automação</p>
             </div>
           </div>
 
@@ -57,18 +51,18 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('methodology')}
+                  onClick={() => scrollToSection('benefits')}
                   className="text-white/80 hover:text-white transition-colors font-dm-sans"
                 >
-                  Nossa Metodologia
+                  Benefícios
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('solutions')}
+                  onClick={() => scrollToSection('process')}
                   className="text-white/80 hover:text-white transition-colors font-dm-sans"
                 >
-                  Soluções
+                  Nosso Processo
                 </button>
               </li>
               <li>
@@ -88,15 +82,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div>
                 <p className="text-white/80 font-dm-sans text-sm">
-                  Av. Norma Valério Corrêa<br />
-                  Jardim Botânico - Ribeirão Preto/SP
+                  Ribeirão Preto/SP<br />
+                  e Região
                 </p>
               </div>
               <div>
                 <p className="text-white/80 font-dm-sans">(16) 9 8837-4411</p>
               </div>
               <div>
-                <p className="text-white/80 font-dm-sans">contato@autoomatic.app</p>
+                <p className="text-white/80 font-dm-sans">contato@auto0matic.com</p>
               </div>
             </div>
           </div>
@@ -105,11 +99,14 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 font-dm-sans text-sm">
-              © 2024 auto-o-matic. Todos os direitos reservados.
+              © 2024 Auto 0 Matic – Automação Inteligente para Empresas. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <span className="text-white/60 font-dm-sans text-sm">
-                Transformação Digital Simplificada
+                Política de Privacidade
+              </span>
+              <span className="text-white/60 font-dm-sans text-sm">
+                Termos de Uso
               </span>
             </div>
           </div>

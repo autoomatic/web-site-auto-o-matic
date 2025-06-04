@@ -24,9 +24,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">a</span>
+            <span className="text-white font-bold text-lg">A</span>
           </div>
-          <span className="text-2xl font-bold text-primary font-poppins">auto-o-matic</span>
+          <span className="text-2xl font-bold text-primary font-poppins">Auto 0 Matic</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -44,16 +44,16 @@ const Header = () => {
             Quem Somos
           </button>
           <button
-            onClick={() => scrollToSection('methodology')}
+            onClick={() => scrollToSection('benefits')}
             className="text-accent hover:text-primary transition-colors font-dm-sans font-medium"
           >
-            Nossa Metodologia
+            Benefícios
           </button>
           <button
-            onClick={() => scrollToSection('solutions')}
+            onClick={() => scrollToSection('process')}
             className="text-accent hover:text-primary transition-colors font-dm-sans font-medium"
           >
-            Soluções
+            Nosso Processo
           </button>
           <button
             onClick={() => scrollToSection('contact')}
@@ -100,16 +100,16 @@ const Header = () => {
               Quem Somos
             </button>
             <button
-              onClick={() => scrollToSection('methodology')}
+              onClick={() => scrollToSection('benefits')}
               className="text-accent hover:text-primary transition-colors font-dm-sans font-medium text-left"
             >
-              Nossa Metodologia
+              Benefícios
             </button>
             <button
-              onClick={() => scrollToSection('solutions')}
+              onClick={() => scrollToSection('process')}
               className="text-accent hover:text-primary transition-colors font-dm-sans font-medium text-left"
             >
-              Soluções
+              Nosso Processo
             </button>
             <button
               onClick={() => scrollToSection('contact')}

@@ -9,54 +9,43 @@ const Hero = () => {
     }
   };
 
+  const openWhatsApp = () => {
+    const whatsappUrl = "https://api.whatsapp.com/send/?phone=5516988374411&text=Ol%C3%A1%21+Gostaria+de+conhecer+mais+sobre+o+Auto-o-matic,+e+entender+como+ele+pode+me+ajudar+!+%3AD&type=phone_number&app_absent=0";
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
-    <section id="home" className="pt-20 pb-20 bg-gradient-to-br from-primary/5 to-secondary/10">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold text-accent mb-4 font-poppins leading-tight">
-            Simplifique sua
-            <span className="text-primary block">Transformação Digital</span>
+    <section id="home" className="pt-20 pb-20 bg-gradient-to-br from-primary/10 to-secondary/5 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10"></div>
+      <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="max-w-5xl mx-auto text-center animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold text-accent mb-6 font-poppins leading-tight">
+            Transforme Seus Processos Repetitivos em
+            <span className="text-primary block">Eficiência e Economia</span>
+            <span className="block text-3xl md:text-4xl mt-2">com a Auto 0 Matic</span>
           </h1>
-          <div className="text-2xl md:text-3xl font-semibold text-primary mb-8 font-dm-sans">
-            Automatize tarefas, potencialize talentos.
+          
+          <div className="text-xl md:text-2xl text-accent/90 mb-8 font-dm-sans leading-relaxed max-w-4xl mx-auto">
+            <p className="mb-4">
+              Cansado de tarefas manuais que consomem tempo e recursos? 
+            </p>
+            <p className="mb-4">
+              A Auto 0 Matic é um escritório de automação de tarefas focado em médias e grandes empresas, 
+              ajudando você a otimizar operações, reduzir custos e liberar sua equipe para o que realmente importa.
+            </p>
+            <p className="font-semibold text-primary text-2xl">
+              Veja sua automação funcionando <em>antes</em> de qualquer investimento.
+            </p>
           </div>
-          <p className="text-xl text-accent/80 mb-8 font-dm-sans leading-relaxed max-w-3xl mx-auto">
-            Com nossa metodologia auto-o-matic, transformamos a complexidade em simplicidade. 
-            Automação inteligente em semanas, não meses, com resultados garantidos.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button
-              onClick={scrollToContact}
+              onClick={openWhatsApp}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 font-dm-sans font-medium"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-dm-sans font-medium"
             >
-              Comece sua Transformação
+              Descubra o Potencial da Automação na Sua Empresa
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 font-dm-sans font-medium"
-              onClick={() => {
-                const element = document.getElementById('methodology');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Conheça Nossa Metodologia
-            </Button>
-          </div>
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <div className="text-3xl font-bold text-primary mb-2 font-poppins">70%</div>
-              <p className="text-accent/70 font-dm-sans">Redução no tempo operacional</p>
-            </div>
-            <div className="p-6">
-              <div className="text-3xl font-bold text-primary mb-2 font-poppins">95%</div>
-              <p className="text-accent/70 font-dm-sans">Diminuição de erros</p>
-            </div>
-            <div className="p-6">
-              <div className="text-3xl font-bold text-primary mb-2 font-poppins">24/7</div>
-              <p className="text-accent/70 font-dm-sans">Suporte especializado</p>
-            </div>
           </div>
         </div>
       </div>

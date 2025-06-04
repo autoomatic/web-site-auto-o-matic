@@ -1,73 +1,89 @@
 
 const About = () => {
+  const openWhatsApp = () => {
+    const whatsappUrl = "https://api.whatsapp.com/send/?phone=5516988374411&text=Ol%C3%A1%21+Gostaria+de+conhecer+mais+sobre+o+Auto-o-matic,+e+entender+como+ele+pode+me+ajudar+!+%3AD&type=phone_number&app_absent=0";
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-accent mb-6 font-poppins">
-            Quem <span className="text-primary">Somos</span>
+            Auto 0 Matic: <span className="text-primary">Inovação e Foco em Resultados</span>
           </h2>
-          <p className="text-lg text-accent/80 font-dm-sans leading-relaxed">
-            Somos especialistas em transformação digital através da automação inteligente de processos. 
-            Nossa missão é tornar a automação acessível, eficiente e transformadora para empresas de todos os tamanhos.
-          </p>
+          <h3 className="text-2xl text-primary mb-8 font-dm-sans">
+            para Empresas em Ribeirão Preto e Região
+          </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <div className="w-6 h-6 bg-primary rounded"></div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-accent mb-2 font-poppins">Expertise Comprovada</h3>
-                <p className="text-accent/70 font-dm-sans">
-                  Anos de experiência em automação de processos de BackOffice, com foco em resultados mensuráveis.
-                </p>
-              </div>
+        <div className="max-w-5xl mx-auto space-y-8 text-lg font-dm-sans leading-relaxed">
+          <p className="text-accent/80 text-center">
+            Somos a Auto 0 Matic, um escritório com três anos de experiência dedicado à automação de tarefas. 
+            Nosso objetivo nos próximos 12 meses é claro: nos tornar a referência em automação em Ribeirão Preto e região.
+          </p>
+
+          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 text-center">
+            <p className="text-accent/80 text-xl">
+              Atendemos <strong className="text-primary">médias e grandes empresas</strong> que lidam com um 
+              <strong className="text-primary"> alto volume de processos manuais repetitivos</strong>, 
+              entendendo que seu tempo e recursos são valiosos demais para serem gastos em tarefas que 
+              a tecnologia pode executar com mais rapidez e precisão.
+            </p>
+          </div>
+
+          <div className="text-center mt-12">
+            <h3 className="text-3xl font-bold text-accent mb-8 font-poppins">
+              A Diferença Auto 0 Matic: <span className="text-primary">Confiança, Transparência e Resultados Comprovados</span>
+            </h3>
+            <p className="text-accent/80 mb-8">
+              Entendemos que investir em automação é uma decisão importante. Por isso, construímos nosso serviço 
+              sobre pilares que garantem sua tranquilidade e o sucesso do seu projeto:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-primary">
+              <h4 className="text-xl font-bold text-accent mb-4 font-poppins">🔍 Veja Antes de Investir</h4>
+              <p className="text-accent/70">
+                Nosso principal diferencial é a entrega de confiança. Permitimos que você veja o processo 
+                automatizado em funcionamento antes de qualquer compromisso financeiro. Nós finalizamos a 
+                automação e apresentamos o resultado, para que você comprove o valor.
+              </p>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <div className="w-6 h-6 bg-secondary rounded"></div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-accent mb-2 font-poppins">Metodologia Exclusiva</h3>
-                <p className="text-accent/70 font-dm-sans">
-                  Nossa abordagem auto-o-matic garante implementação rápida e eficiente, sem complexidades desnecessárias.
-                </p>
-              </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-secondary">
+              <h4 className="text-xl font-bold text-accent mb-4 font-poppins">📊 Acompanhamento Constante</h4>
+              <p className="text-accent/70">
+                Não desaparecemos após a implementação. Oferecemos acompanhamento constante à nossa base de clientes, 
+                garantindo que a solução continue performando.
+              </p>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <div className="w-6 h-6 bg-primary rounded"></div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-accent mb-2 font-poppins">Suporte Contínuo</h3>
-                <p className="text-accent/70 font-dm-sans">
-                  Monitoramento 24/7 e suporte especializado para garantir o máximo desempenho das suas automações.
-                </p>
-              </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-primary">
+              <h4 className="text-xl font-bold text-accent mb-4 font-poppins">✅ Garantia de Eficiência</h4>
+              <p className="text-accent/70">
+                Temos tanta confiança em nossas soluções que garantimos que a automação trará eficiência. 
+                Caso contrário, revemos o processo para assegurar os resultados esperados.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-secondary">
+              <h4 className="text-xl font-bold text-accent mb-4 font-poppins">💰 Venda Consultiva e Foco no ROI</h4>
+              <p className="text-accent/70">
+                Trabalhamos com uma abordagem de venda consultiva, buscando entender profundamente suas necessidades. 
+                Apresentamos o potencial de retorno sobre o investimento (ROI), estimado geralmente entre seis a oito meses.
+              </p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-accent mb-6 font-poppins">Nossa Visão</h3>
-            <p className="text-accent/80 font-dm-sans leading-relaxed mb-6">
-              Acreditamos que a automação deve ser uma ponte para o crescimento, não um obstáculo. 
-              Por isso, desenvolvemos soluções que se adaptam ao seu negócio, não o contrário.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="text-center p-4 bg-white rounded-lg">
-                <div className="text-2xl font-bold text-primary mb-1 font-poppins">100+</div>
-                <p className="text-sm text-accent/70 font-dm-sans">Processos Automatizados</p>
-              </div>
-              <div className="text-center p-4 bg-white rounded-lg">
-                <div className="text-2xl font-bold text-primary mb-1 font-poppins">50+</div>
-                <p className="text-sm text-accent/70 font-dm-sans">Empresas Atendidas</p>
-              </div>
-            </div>
+          <div className="text-center mt-12">
+            <button
+              onClick={openWhatsApp}
+              className="bg-secondary hover:bg-secondary/90 text-white px-8 py-3 rounded-lg font-dm-sans font-medium transition-colors"
+            >
+              Agende uma Demonstração Gratuita
+            </button>
           </div>
         </div>
       </div>

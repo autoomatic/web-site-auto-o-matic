@@ -2,8 +2,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Methodology from "@/components/Methodology";
-import Solutions from "@/components/Solutions";
+import Benefits from "@/components/Benefits";
+import Process from "@/components/Process";
+import FinalCTA from "@/components/FinalCTA";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -14,8 +15,13 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
-      <Methodology />
-      <Solutions />
+      <section id="benefits">
+        <Benefits />
+      </section>
+      <section id="process">
+        <Process />
+      </section>
+      <FinalCTA />
       <ContactForm />
       <Footer />
       <WhatsAppFloat />
