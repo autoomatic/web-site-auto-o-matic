@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -49,10 +48,10 @@ const ContactForm = () => {
 
       // Send email using EmailJS
       await emailjs.send(
-        'YOUR_SERVICE_ID', // You'll need to replace this
-        'YOUR_TEMPLATE_ID', // You'll need to replace this
+        'service_5j1gy0k', // Service ID fornecido
+        'YOUR_TEMPLATE_ID', // Você ainda precisa fornecer o Template ID
         templateParams,
-        'YOUR_PUBLIC_KEY' // You'll need to replace this
+        'YOUR_PUBLIC_KEY' // Você ainda precisa fornecer a Public Key
       );
 
       toast({
