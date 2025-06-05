@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,11 +24,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A</span>
-            </div>
-            <span className="text-xl font-bold text-accent font-poppins">Auto-o-Matic</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/b1b826cf-807b-4117-bdfe-6291e8a9352c.png" 
+              alt="Auto-o-Matic - Automação Inteligente"
+              className="h-8 w-auto"
+            />
             <span className="text-sm text-primary font-dm-sans hidden sm:block">Automatize tarefas, potencialize talentos.</span>
           </div>
 

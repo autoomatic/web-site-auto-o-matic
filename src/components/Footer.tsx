@@ -1,3 +1,4 @@
+
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,11 +13,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
-              <span className="text-2xl font-bold font-poppins">Auto-o-Matic</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/lovable-uploads/b1b826cf-807b-4117-bdfe-6291e8a9352c.png" 
+                alt="Auto-o-Matic - Automação Inteligente"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-white/80 font-dm-sans leading-relaxed mb-6 max-w-md">
               Escritório de automação de tarefas focado em médias e grandes empresas. 
