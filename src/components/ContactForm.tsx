@@ -1,12 +1,15 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     nomeEmpresa: '',
     nomeContato: '',
@@ -24,24 +27,60 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
     
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em breve para iniciar sua transformação digital.",
-    });
+    console.log('Form submitted:', formData);
 
-    // Reset form
-    setFormData({
-      nomeEmpresa: '',
-      nomeContato: '',
-      email: '',
-      telefone: '',
-      tipoNegocio: '',
-      mensagem: ''
-    });
+    try {
+      // Template parameters for EmailJS
+      const templateParams = {
+        to_email: 'tecnologia@autoomatic.app',
+        from_name: formData.nomeContato,
+        company_name: formData.nomeEmpresa,
+        contact_name: formData.nomeContato,
+        email: formData.email,
+        phone: formData.telefone,
+        business_type: formData.tipoNegocio,
+        message: formData.mensagem || 'Nenhuma mensagem adicional fornecida',
+        subject: `Novo contato: ${formData.nomeEmpresa} - ${formData.nomeContato}`
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // You'll need to replace this
+        'YOUR_TEMPLATE_ID', // You'll need to replace this
+        templateParams,
+        'YOUR_PUBLIC_KEY' // You'll need to replace this
+      );
+
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Recebemos seu contato e entraremos em contato em breve para iniciar sua transformação digital.",
+      });
+
+      // Reset form
+      setFormData({
+        nomeEmpresa: '',
+        nomeContato: '',
+        email: '',
+        telefone: '',
+        tipoNegocio: '',
+        mensagem: ''
+      });
+
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato diretamente pelo telefone.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -71,6 +110,7 @@ const ContactForm = () => {
                       value={formData.nomeEmpresa}
                       onChange={handleInputChange}
                       required
+                      disabled={isSubmitting}
                       className="font-dm-sans"
                     />
                   </div>
@@ -82,6 +122,7 @@ const ContactForm = () => {
                       value={formData.nomeContato}
                       onChange={handleInputChange}
                       required
+                      disabled={isSubmitting}
                       className="font-dm-sans"
                     />
                   </div>
@@ -97,6 +138,7 @@ const ContactForm = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
+                      disabled={isSubmitting}
                       className="font-dm-sans"
                     />
                   </div>
@@ -109,6 +151,7 @@ const ContactForm = () => {
                       value={formData.telefone}
                       onChange={handleInputChange}
                       required
+                      disabled={isSubmitting}
                       className="font-dm-sans"
                     />
                   </div>
@@ -122,7 +165,8 @@ const ContactForm = () => {
                     value={formData.tipoNegocio}
                     onChange={handleInputChange}
                     required
-                    className="w-full p-2 border border-gray-300 rounded-md font-dm-sans focus:ring-2 focus:ring-primary focus:border-transparent"
+                    disabled={isSubmitting}
+                    className="w-full p-2 border border-gray-300 rounded-md font-dm-sans focus:ring-2 focus:ring-primary focus:border-transparent disabled:opacity-50"
                   >
                     <option value="">Selecione o tipo de negócio</option>
                     <option value="industria">Indústria</option>
@@ -144,6 +188,7 @@ const ContactForm = () => {
                     value={formData.mensagem}
                     onChange={handleInputChange}
                     rows={4}
+                    disabled={isSubmitting}
                     placeholder="Conte-nos sobre seus principais desafios e processos que gostaria de automatizar..."
                     className="font-dm-sans"
                   />
@@ -151,9 +196,10 @@ const ContactForm = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-white py-3 font-dm-sans font-medium"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary hover:bg-primary/90 text-white py-3 font-dm-sans font-medium disabled:opacity-50"
                 >
-                  Solicitar Contato
+                  {isSubmitting ? "Enviando..." : "Solicitar Contato"}
                 </Button>
               </form>
             </div>
