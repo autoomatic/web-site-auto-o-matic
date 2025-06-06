@@ -62,99 +62,9 @@ const ContactForm = () => {
             {/* Form */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="nomeEmpresa" className="font-dm-sans">Nome da Empresa *</Label>
-                    <Input
-                      id="nomeEmpresa"
-                      name="nomeEmpresa"
-                      value={formData.nomeEmpresa}
-                      onChange={handleInputChange}
-                      required
-                      className="font-dm-sans"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="nomeContato" className="font-dm-sans">Nome do Contato *</Label>
-                    <Input
-                      id="nomeContato"
-                      name="nomeContato"
-                      value={formData.nomeContato}
-                      onChange={handleInputChange}
-                      required
-                      className="font-dm-sans"
-                    />
-                  </div>
+                <div id="FormFunildeVendas">
+                <script src="https://leads.funildevendas.com.br/Forms/Forms.js" id="KeyFormsFunil" data-name="W06EU20250605234841"></script>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="font-dm-sans">Email *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="font-dm-sans"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="telefone" className="font-dm-sans">Telefone *</Label>
-                    <Input
-                      id="telefone"
-                      name="telefone"
-                      type="tel"
-                      value={formData.telefone}
-                      onChange={handleInputChange}
-                      required
-                      className="font-dm-sans"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="tipoNegocio" className="font-dm-sans">Tipo de Negócio *</Label>
-                  <select
-                    id="tipoNegocio"
-                    name="tipoNegocio"
-                    value={formData.tipoNegocio}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full p-2 border border-gray-300 rounded-md font-dm-sans focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    <option value="">Selecione o tipo de negócio</option>
-                    <option value="industria">Indústria</option>
-                    <option value="comercio">Comércio</option>
-                    <option value="servicos">Serviços</option>
-                    <option value="logistica">Logística</option>
-                    <option value="financeiro">Financeiro</option>
-                    <option value="saude">Saúde</option>
-                    <option value="educacao">Educação</option>
-                    <option value="outros">Outros</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="mensagem" className="font-dm-sans">Mensagem</Label>
-                  <Textarea
-                    id="mensagem"
-                    name="mensagem"
-                    value={formData.mensagem}
-                    onChange={handleInputChange}
-                    rows={4}
-                    placeholder="Conte-nos sobre seus principais desafios e processos que gostaria de automatizar..."
-                    className="font-dm-sans"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-white py-3 font-dm-sans font-medium"
-                >
-                  Solicitar Contato
-                </Button>
               </form>
             </div>
 
@@ -203,7 +113,8 @@ const ContactForm = () => {
                 <h3 className="text-xl font-bold mb-4 font-poppins">Pronto para começar?</h3>
                 <p className="font-dm-sans leading-relaxed">
                   Entre em contato conosco e descubra como nossa metodologia auto-o-matic 
-                  pode transformar seus processos em semanas, não meses.
+                  pode transformar seus processos em semanas, não meses. Receba gratuitamente 
+                  o treinamento que irá lhe auxiliar no levantamento de novas oportunidades.
                 </p>
                 <div className="mt-6 grid grid-cols-2 gap-4 text-center">
                   <div>

@@ -23,12 +23,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A</span>
-            </div>
-            <span className="text-xl font-bold text-accent font-poppins">Auto-o-Matic</span>
-            <span className="text-sm text-primary font-dm-sans hidden sm:block">Automatize tarefas, potencialize talentos.</span>
+           <div className="flex items-center space-x-3">
+            <img 
+              src="img/Logomarca.png" 
+              alt="Auto-o-Matic - Automação Inteligente"
+              className="h-14 w-auto"
+              onClick={() => scrollToSection('home')}
+            />
           </div>
 
           {/* Navigation */}

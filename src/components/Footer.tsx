@@ -12,11 +12,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
-              <span className="text-2xl font-bold font-poppins">Auto-o-Matic</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/img/Logomarca-fundo-escuro.png" 
+                alt="Auto-o-Matic - Automação Inteligente"
+                className="h-14 w-auto"
+                onClick={() => scrollToSection('home')}
+              />
             </div>
             <p className="text-white/80 font-dm-sans leading-relaxed mb-6 max-w-md">
               Escritório de automação de tarefas focado em médias e grandes empresas. 
@@ -86,10 +88,10 @@ const Footer = () => {
                 </p>
               </div>
               <div>
-                <p className="text-white/80 font-dm-sans">(16) 9 8837-4411</p>
+                <p className="text-white/80 font-dm-sans">+55 (16) 9 8837-4411</p>
               </div>
               <div>
-                <p className="text-white/80 font-dm-sans">contato@autoomatic.com</p>
+                <p className="text-white/80 font-dm-sans">contato@autoomatic.app</p>
               </div>
             </div>
           </div>
