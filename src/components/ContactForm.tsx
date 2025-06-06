@@ -45,14 +45,6 @@ const ContactForm = () => {
         subject: `Novo contato: ${formData.nomeEmpresa} - ${formData.nomeContato}`
       };
 
-      // Send email using EmailJS
-      await emailjs.send(
-        'service_5j1gy0k', // Service ID fornecido
-        'YOUR_TEMPLATE_ID', // Você ainda precisa fornecer o Template ID
-        templateParams,
-        'YOUR_PUBLIC_KEY' // Você ainda precisa fornecer a Public Key
-      );
-
       toast({
         title: "Mensagem enviada com sucesso!",
         description: "Recebemos seu contato e entraremos em contato em breve para iniciar sua transformação digital.",
