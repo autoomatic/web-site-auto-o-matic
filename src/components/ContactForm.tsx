@@ -4,9 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     nomeEmpresa: '',
     nomeContato: '',
@@ -24,24 +26,60 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
     
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em breve para iniciar sua transformação digital.",
-    });
+    console.log('Form submitted:', formData);
 
-    // Reset form
-    setFormData({
-      nomeEmpresa: '',
-      nomeContato: '',
-      email: '',
-      telefone: '',
-      tipoNegocio: '',
-      mensagem: ''
-    });
+    try {
+      // Template parameters for EmailJS
+      const templateParams = {
+        to_email: 'tecnologia@autoomatic.app',
+        from_name: formData.nomeContato,
+        company_name: formData.nomeEmpresa,
+        contact_name: formData.nomeContato,
+        email: formData.email,
+        phone: formData.telefone,
+        business_type: formData.tipoNegocio,
+        message: formData.mensagem || 'Nenhuma mensagem adicional fornecida',
+        subject: `Novo contato: ${formData.nomeEmpresa} - ${formData.nomeContato}`
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_5j1gy0k', // Service ID fornecido
+        'YOUR_TEMPLATE_ID', // Você ainda precisa fornecer o Template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Você ainda precisa fornecer a Public Key
+      );
+
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Recebemos seu contato e entraremos em contato em breve para iniciar sua transformação digital.",
+      });
+
+      // Reset form
+      setFormData({
+        nomeEmpresa: '',
+        nomeContato: '',
+        email: '',
+        telefone: '',
+        tipoNegocio: '',
+        mensagem: ''
+      });
+
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato diretamente pelo telefone.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
