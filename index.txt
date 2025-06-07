@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -16,9 +15,6 @@
 
     <!-- Favicon -->
     <link rel="icon" href="img/Logo-Oficial.png" type="image/png">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/lovable-uploads/b1b826cf-807b-4117-bdfe-6291e8a9352c.png" type="image/png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
